@@ -66,11 +66,15 @@ a {
 body {
 	font-size: $base-font-size;
 	overflow-x: hidden;
+	background: $section-hero;
 }
 
 header {
 	background: $body-black;
 	padding: 0 2em;
+	z-index: 3;
+	position: fixed;
+	width: 100%;
 
 	img {
 		vertical-align: middle;
@@ -138,6 +142,20 @@ footer {
 		font-size: 1em;
 	}
 }
+
+.parralax {
+		position: fixed;
+		z-index: 1;
+		width: 100%;
+
+}
+
+.content {
+	position: relative;
+	z-index: 2;
+}
+
+
 
 section {
 	background: body-white;
@@ -569,6 +587,10 @@ nav.primary-nav, .logo-link {
     			display: block;
     			margin: 0 auto 0  auto;
     		}
+
+    		.scroll-down {
+    			display: none;
+    		}
     	}
 	}
 	
@@ -673,7 +695,6 @@ nav.primary-nav, .logo-link {
 
 @media screen and (max-width: 1100px) {
 	header {
-		position: relative;
 		background: $black;
 
 		.logo-link {

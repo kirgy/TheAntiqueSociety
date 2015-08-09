@@ -19,27 +19,37 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			// $('.primary-nav-open').click(function() {
-			// 	console.log("HERE!");
-			// });
+			$('.parralax').css('top', ( ($('.parralax').scrollTop() + $('header').height()) - ($(document).scrollTop()) ));
+			$('.content').css('top', $('.parralax').height() + $('header').height());
 
 			$('#hamburger').click(function(){
 				var navID = '.primary-nav';
 				console.log('toggling burger...');
 			
-				if($(navID).hasClass('primary-nav-open')) {
-					$(navID).delay(1000).queue(function() {  // Wait for 1 second.
-					    $(navID).addClass("hide").dequeue();
-					});
-				} else {
-					$(navID).removeClass("hide");
-				}
+				// if($(navID).hasClass('primary-nav-open')) {
+				// 	$(navID).delay(1000).queue(function() {  // Wait for 1 second.
+				// 	    $(navID).addClass("hide").dequeue();
+				// 	});
+				// } else {
+				// 	$(navID).removeClass("hide");
+				// }
 				
 				$(navID).toggleClass('primary-nav-open');
 				$(this).toggleClass('hamburger-open');
 				
 			});
 
+			$(document).scroll(function(){
+				parralexIt();
+			});
+
+			$(window).resize(function(){
+				$('.parralax').css('top', ( ($('.parralax').scrollTop() + $('header').height()) - ($(document).scrollTop()) ));
+				$('.content').css('top', $('.parralax').height() + $('header').height());
+			});
+			function parralexIt() {
+				$('.parralax').css('top', ( ($('.parralax').scrollTop() + $('header').height()) - ($(document).scrollTop()/1.7) ));
+			}
 		});
 	</script>
 </head>
@@ -109,113 +119,117 @@
 	</nav>
 </header>
 <!-- homepage START !-->
-<section class="hero" id="hero">
-	<div class="inner-wrapper">
+<div class="parralax">
+	<section class="hero" id="hero">
+		<div class="inner-wrapper">
+			<div class="inner-container">
+				<h1>
+					<span class="smaller">The</span> Antique Society
+				</h1>
+				<img src="img/mobile_hero.jpg" alt="Antique Chair" class="hero-image"/>
+				<div class="sep"></div>
+				<p class="hero-secondary">
+					Ipsum lorum del sora asti
+					del verde cresti sa.
+				</p>
+				<div class="caption home-caption">
+					<p>
+						<span class="caption-year">c.1770</span> <span class="caption-sep">/</span>
+						<span class="caption-description">Armchair by Michel Gourdin - France
+						and two lines if required.</span>
+					</p>
+				</div>
+				<div class="sroll-down">
+					^
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<div class="content">
+	<section class="about">
 		<div class="inner-container">
-			<h1>
-				<span class="smaller">The</span> Antique Society
-			</h1>
-			<img src="img/mobile_hero.jpg" alt="Antique Chair" class="hero-image"/>
-			<div class="sep"></div>
-			<p class="hero-secondary">
-				Ipsum lorum del sora asti
-				del verde cresti sa.
+			<h2>
+				Antique Appreciation Since 1964.
+			</h2>
+			<div class="sep">&nbsp;</div>		
+			<p class="body">
+				The Antique Society was founded to study furniture of all periods, places and kinds, to increase knowledge and appreciation of it, and to assist in the preservation of furniture and its records.
 			</p>
-			<div class="caption home-caption">
+			<img src="img/table.jpg" class="featured" alt="Antique Table" />
+			<div class="caption about-caption">
 				<p>
 					<span class="caption-year">c.1770</span> <span class="caption-sep">/</span>
 					<span class="caption-description">Armchair by Michel Gourdin - France
 					and two lines if required.</span>
 				</p>
 			</div>
-			<div class="sroll-down">
-				^
-			</div>
 		</div>
-	</div>
-</section>
-<section class="about">
-	<div class="inner-container">
-		<h2>
-			Antique Appreciation Since 1964.
-		</h2>
-		<div class="sep">&nbsp;</div>		
-		<p class="body">
-			The Antique Society was founded to study furniture of all periods, places and kinds, to increase knowledge and appreciation of it, and to assist in the preservation of furniture and its records.
-		</p>
-		<img src="img/table.jpg" class="featured" alt="Antique Table" />
-		<div class="caption about-caption">
-			<p>
-				<span class="caption-year">c.1770</span> <span class="caption-sep">/</span>
-				<span class="caption-description">Armchair by Michel Gourdin - France
-				and two lines if required.</span>
-			</p>
+	</section>
+	<section class="events">
+		<div class="section-inner-container">
+			<h2>
+				New Events
+			</h2>
+			<div class="sep">&nbsp;</div>
+			<ul>
+				<li class="item-0">
+					<p class="date">
+						<a href="#real-link-goes-here!" class="date">21<span class="sup">st</span> Feb / <span class="year">2015</span>
+					</p>
+					<h3><a href="">THE 39<span class="sup">th</span> Annual Symposium 2015</a></h3>
+					<p class="extract">The Wallace Collection, Hertford House, Manchester Square, London, W1
+						Price: &pound;45.00
+					</p>
+					<p>
+						<a href="#real-link-goes-here!" class="cta-button">Event details &gt;</a>
+					</p>
+				</li>
+				<li class="item-1">
+					<p class="date">
+						<a href="#real-link-goes-here!" class="date">21<span class="sup">st</span> Feb / <span class="year">2015</span>
+					</p>
+					<h3><a href="">THE 39<span class="sup">th</span> Annual Symposium 2015</a></h3>
+					<p class="extract">The Wallace Collection, Hertford House, Manchester Square, London, W1
+						Price: &pound;45.00
+					</p>
+					<p>
+						<a href="#real-link-goes-here!" class="cta-button">Event details &gt;</a>
+					</p>
+				</li>
+				<li class="item-2">
+					<p class="date">
+						<a href="#real-link-goes-here!" class="date">21<span class="sup">st</span> Feb / <span class="year">2015</span>
+					</p>
+					<h3><a href="">THE 39<span class="sup">th</span> Annual Symposium 2015</a></h3>
+					<p class="extract">The Wallace Collection, Hertford House, Manchester Square, London, W1
+						Price: &pound;45.00
+					</p>
+					<p>
+						<a href="#real-link-goes-here!" class="cta-button">Event details &gt;</a>
+					</p>
+				</li>
+			</ul>
 		</div>
-	</div>
-</section>
-<section class="events">
-	<div class="section-inner-container">
-		<h2>
-			New Events
-		</h2>
-		<div class="sep">&nbsp;</div>
-		<ul>
-			<li class="item-0">
-				<p class="date">
-					<a href="#real-link-goes-here!" class="date">21<span class="sup">st</span> Feb / <span class="year">2015</span>
-				</p>
-				<h3><a href="">THE 39<span class="sup">th</span> Annual Symposium 2015</a></h3>
-				<p class="extract">The Wallace Collection, Hertford House, Manchester Square, London, W1
-					Price: &pound;45.00
-				</p>
-				<p>
-					<a href="#real-link-goes-here!" class="cta-button">Event details &gt;</a>
-				</p>
-			</li>
-			<li class="item-1">
-				<p class="date">
-					<a href="#real-link-goes-here!" class="date">21<span class="sup">st</span> Feb / <span class="year">2015</span>
-				</p>
-				<h3><a href="">THE 39<span class="sup">th</span> Annual Symposium 2015</a></h3>
-				<p class="extract">The Wallace Collection, Hertford House, Manchester Square, London, W1
-					Price: &pound;45.00
-				</p>
-				<p>
-					<a href="#real-link-goes-here!" class="cta-button">Event details &gt;</a>
-				</p>
-			</li>
-			<li class="item-2">
-				<p class="date">
-					<a href="#real-link-goes-here!" class="date">21<span class="sup">st</span> Feb / <span class="year">2015</span>
-				</p>
-				<h3><a href="">THE 39<span class="sup">th</span> Annual Symposium 2015</a></h3>
-				<p class="extract">The Wallace Collection, Hertford House, Manchester Square, London, W1
-					Price: &pound;45.00
-				</p>
-				<p>
-					<a href="#real-link-goes-here!" class="cta-button">Event details &gt;</a>
-				</p>
-			</li>
-		</ul>
-	</div>
-</section>
+	</section>
 
-<footer>
-	<p class="footer-logo">
-		<span class="smaller">The</span> 
-		<span>Antique</span>
-		<span>Society</span>
-	</p>	
-	<p class="footer-link">
-		<a href="#real-link-here!">CONTACT</a> &amp; <a href="#real-link-here!">LINKS</a>
-	</p>
-	<p class="tandc">
-	&copy; Antique Society is a registered charity.
-	</p>
-	<p class="privacy-tandc-links">
-		<a href="#real-link-here!">PRIVACY POLICY</a>     |     <a href="#real-link-here!">TERMS &amp; CONDITIONS</a>
-	</p>
-</footer>
+	<footer>
+		<p class="footer-logo">
+			<span class="smaller">The</span> 
+			<span>Antique</span>
+			<span>Society</span>
+		</p>	
+		<p class="footer-link">
+			<a href="#real-link-here!">CONTACT</a> &amp; <a href="#real-link-here!">LINKS</a>
+		</p>
+		<p class="tandc">
+		&copy; Antique Society is a registered charity.
+		</p>
+		<p class="privacy-tandc-links">
+			<a href="#real-link-here!">PRIVACY POLICY</a>     |     <a href="#real-link-here!">TERMS &amp; CONDITIONS</a>
+		</p>
+	</footer>
+</div>
 <!-- homepage END !-->
 </body>
 </html>
