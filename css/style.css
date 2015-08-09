@@ -54,6 +54,8 @@ header {
     vertical-align: middle;
     display: inline-block;
     max-width: 100%; }
+  header .hamburger-open {
+    background-position: -45px center; }
 
 footer {
   background: #1b1b1b;
@@ -346,7 +348,11 @@ nav.primary-nav, .logo-link {
   background-repeat: no-repeat;
   display: none;
   height: 58px;
-  width: 52px; }
+  width: 52px;
+  width: 45px;
+  height: 43px;
+  background-position: 0 center;
+  background-size: 90px 22px; }
 
 /**
 *	Responsive Stylings
@@ -443,18 +449,17 @@ nav.primary-nav, .logo-link {
     max-width: 100%; } }
 @media screen and (max-width: 1100px) {
   header {
-    background: #000000; }
+    background: #000000;
+    padding: 0.5em 1em; }
     header .logo-link {
       display: none;
       font-size: 1.2em; }
-    header .hamburger-wrapper {
-      padding-top: 1em; }
-      header .hamburger-wrapper .hamburger {
-        display: block;
-        z-index: 999999;
-        padding-top: 1em;
-        margin-right: 0;
-        margin-left: auto; }
+    header .hamburger-wrapper .hamburger {
+      display: block;
+      z-index: 999999;
+      padding-top: 1em;
+      margin-right: 0;
+      margin-left: auto; }
     header nav.primary-nav-open {
       display: block;
       left: 0;

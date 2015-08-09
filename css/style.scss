@@ -81,6 +81,10 @@ header {
 		display: inline-block;
 		max-width: 100%;
 	}
+
+	.hamburger-open {
+		background-position: -45px center;
+	}
 }
 
 footer {
@@ -522,6 +526,11 @@ nav.primary-nav, .logo-link {
 	display: none;
 	height: 58px;
 	width: 52px;
+
+    width: 45px;
+    height: 43px;
+    background-position: 0 center;
+    background-size: 90px 22px;	
 }
 
 
@@ -697,13 +706,13 @@ nav.primary-nav, .logo-link {
 @media screen and (max-width: 1100px) {
 	header {
 		background: $black;
+			padding: 0.5em 1em;
 
 		.logo-link {
 			display: none;
 			font-size: 1.2em;
 		}
 		.hamburger-wrapper {
-			padding-top: 1em;
 
 			.hamburger {
 				display: block;
