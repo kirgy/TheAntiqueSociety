@@ -93,6 +93,8 @@ footer {
     color: #988468;
     text-decoration: none;
     font-size: 1em; }
+    footer a:hover {
+      color: #f3f3f3; }
 
 .parralax {
   position: fixed;
