@@ -17,41 +17,7 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 	<!-- this jqeury lib ref is most likely already cached - so will decrease loading time. -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('.parralax').css('top', ( ($('.parralax').scrollTop() + $('header').height()) - ($(document).scrollTop()) ));
-			$('.content').css('top', $('.parralax').height() + $('header').height());
-
-			$('#hamburger').click(function(){
-				var navID = '.primary-nav';
-				console.log('toggling burger...');
-			
-				// if($(navID).hasClass('primary-nav-open')) {
-				// 	$(navID).delay(1000).queue(function() {  // Wait for 1 second.
-				// 	    $(navID).addClass("hide").dequeue();
-				// 	});
-				// } else {
-				// 	$(navID).removeClass("hide");
-				// }
-				
-				$(navID).toggleClass('primary-nav-open');
-				$(this).toggleClass('hamburger-open');
-				
-			});
-
-			$(document).scroll(function(){
-				parralexIt();
-			});
-
-			$(window).resize(function(){
-				$('.parralax').css('top', ( ($('.parralax').scrollTop() + $('header').height()) - ($(document).scrollTop()) ));
-				$('.content').css('top', $('.parralax').height() + $('header').height());
-			});
-			function parralexIt() {
-				$('.parralax').css('top', ( ($('.parralax').scrollTop() + $('header').height()) - ($(document).scrollTop()/1.7) ));
-			}
-		});
-	</script>
+	<script src="scripts/site.js" type="text/javascript"></script>
 </head>
 <body class="home">
 <header>
@@ -139,7 +105,7 @@
 						and two lines if required.</span>
 					</p>
 				</div>
-				<div class="sroll-down">
+				<div class="scroll-down">
 					^
 				</div>
 			</div>

@@ -257,7 +257,7 @@ section.hero {
 		min-width: 30px;
 	}
 
-	.sroll-down {
+	.scroll-down {
 		-webkit-transform: rotate(180deg);
 		-moz-transform: rotate(180deg);
 		-o-transform: rotate(180deg);
@@ -269,6 +269,7 @@ section.hero {
 		font-size: 1.5em;	
 		padding-top: 1em; 
 
+		cursor: pointer;
 		display: none;
 	}
 
@@ -483,7 +484,7 @@ nav {
 
 	ul  {
 		list-style: none;
-		font-size: 1em;
+		font-size: 0.8em;
 		vertical-align: middle;
 
 		li {
@@ -740,7 +741,7 @@ nav.primary-nav, .logo-link {
 	}
 
 	section.hero {
-		.sroll-down {
+		.scroll-down {
 			display: block;
 		}
 	}

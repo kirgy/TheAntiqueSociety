@@ -170,7 +170,7 @@ section.hero {
     font-size: 0.1em;
     padding: 6em 0 6em 0;
     min-width: 30px; }
-  section.hero .sroll-down {
+  section.hero .scroll-down {
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -o-transform: rotate(180deg);
@@ -180,6 +180,7 @@ section.hero {
     color: #f3f3f3;
     font-size: 1.5em;
     padding-top: 1em;
+    cursor: pointer;
     display: none; }
 
 section.about {
@@ -320,7 +321,7 @@ section.events {
 
 nav ul {
   list-style: none;
-  font-size: 1em;
+  font-size: 0.8em;
   vertical-align: middle; }
   nav ul li {
     display: inline-block;
@@ -470,7 +471,7 @@ nav.primary-nav, .logo-link {
       transition: left 1s;
       font-size: 1.5em; }
 
-  section.hero .sroll-down {
+  section.hero .scroll-down {
     display: block; }
 
   .hamburger-wrapper {
