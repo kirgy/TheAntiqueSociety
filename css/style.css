@@ -325,6 +325,7 @@ nav ul {
     border: 0;
     padding-right: 1em; }
     nav ul li a {
+      font-family: PalatinoLT-Light, "Times New Roman", serif;
       color: #988468;
       text-decoration: none; }
       nav ul li a:hover {
