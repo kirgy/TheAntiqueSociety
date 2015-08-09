@@ -396,7 +396,7 @@ nav.primary-nav, .logo-link {
     margin: 0 auto;
     font-size: 1.4em;
     text-align: center;
-    padding: 0 2em 2em 2em; }
+    padding: 0 0em 2em 0em; }
     section.events ul li.item-1, section.events ul li.item-2 {
       display: none; }
     section.events ul li .date {
@@ -410,12 +410,18 @@ nav.primary-nav, .logo-link {
       margin: 0 auto; }
 
   footer {
-    font-size: 1.7em; } }
+    font-size: 1.2em; } }
 @media screen and (max-width: 475px) {
   section.hero .inner-wrapper h1 {
     font-size: 2em; }
   section.hero .inner-wrapper .home-caption {
-    max-width: 90%; } }
+    max-width: 90%; }
+
+  section.about {
+    font-size: 0.8em; }
+
+  section.events {
+    font-size: 0.6em; } }
 @media screen and (max-width: 600px) {
   section.about h2 {
     max-width: 100%; } }
@@ -439,6 +445,7 @@ nav.primary-nav, .logo-link {
       left: 0;
       transition: left 1s; }
     header .primary-nav {
+      display: none;
       left: 100%;
       transition: left 1s;
       font-size: 1.5em; }
