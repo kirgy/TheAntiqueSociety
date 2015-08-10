@@ -445,7 +445,9 @@ nav.primary-nav, .logo-link {
     font-size: 0.8em; }
 
   section.events {
-    font-size: 0.6em; } }
+    font-size: 0.6em; }
+    section.events ul li p.extract {
+      font-size: 0.9em; } }
 @media screen and (max-width: 600px) {
   section.about h2 {
     max-width: 100%; } }

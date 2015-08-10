@@ -696,7 +696,11 @@ nav.primary-nav, .logo-link {
     }
 
     section.events {
-    	font-size: 0.6em
+    	font-size: 0.6em;
+
+    	ul li p.extract {
+    		font-size: 0.9em;
+    	}
     }
 }
 
