@@ -55,7 +55,7 @@ header {
     display: inline-block;
     max-width: 100%; }
   header .hamburger-open {
-    background-position: -45px center; }
+    background-position: -54px center; }
 
 footer {
   background: #1b1b1b;
@@ -354,8 +354,7 @@ nav.primary-nav, .logo-link {
   width: 52px;
   width: 45px;
   height: 43px;
-  background-position: 0 center;
-  background-size: 90px 22px; }
+  background-position: 0 center; }
 
 /**
 *	Responsive Stylings
